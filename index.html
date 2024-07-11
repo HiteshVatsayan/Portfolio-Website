@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hitesh - Portfolio Website</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(18, 18, 62);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+
+            color: rgb(140, 140, 229);
+            font-size: 1.02rem;
+
+
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 40px 80px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstSection {
+            display: flex;
+            justify-content: space-around;
+            margin: 100px 0;
+            /* margin: 50 px 0; */
+        }
+
+        .firstSection>div {
+            width: 35%;
+            /* background-color: red; */
+        }
+
+        .leftSection {
+            /* background-color: red; */
+            width: 10%;
+            margin: 10px 0;
+            font-size: 2.5rem;
+        }
+
+        .btn {
+            /* background-color: red; */
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            font-size: 1.4rem;
+            background-color: #3d4098;
+        }
+
+
+        .rightSection img {
+            width: 80%;
+
+
+        }
+
+        .purple {
+            color: rgb(131, 75, 184);
+        }
+
+        #element {
+            color: rgb(131, 75, 184);
+        }
+
+        .secondSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 50px 0;
+            height: 100vh;
+        }
+
+        .secondSection h1 {
+            font-size: 1.9rem;
+            color: rgb(131, 75, 184);
+        }
+
+
+        .image-top1 {
+            width: 30%;
+            position: relative;
+            top: -32px;
+            left: 779px;
+        }
+
+        .vertical-title1 {
+            position: relative;
+            top: -340px;
+            width: 500px;
+            margin: 10px 20px;
+        }
+
+        .vertical-desc1 {
+            position: relative;
+            top: 10px;
+            color: gray;
+            width: 500px;
+            margin: 10px 50px;
+
+        }
+
+        .kracrDesc {
+            position: relative;
+            top: 10px;
+            color: gray;
+            width: 1000px;
+            margin: 10px 50px;
+        }
+
+        .kracrDesc a {
+            text-decoration: none;
+            color: rgb(147, 92, 198);
+            height: 20px;
+
+        }
+
+        .kracrDesc a:hover {
+            color: rgb(140, 140, 229);
+            font-size: 1.02rem;
+        }
+
+        .vertical-desc1 ul a {
+            text-decoration: none;
+            color: white;
+            height: 20px;
+            color: rgb(147, 92, 198);
+        }
+
+        .vertical-desc1 ul a:hover {
+            color: rgb(140, 140, 229);
+            font-size: 1.02rem;
+        }
+
+        .thirdSection {
+            max-width: 80vw;
+            margin: auto;
+            height: 149vh;
+            padding: 50px;
+        }
+
+        .thirdSection h1 {
+            font-size: 1.9rem;
+            color: rgb(131, 75, 184);
+        }
+
+        .intro {
+            position: relative;
+            top: -340px;
+            width: 700px;
+            margin: 10px 20px;
+        }
+
+
+        .hiteshImg {
+            width: 30%;
+            position: relative;
+            top: -32px;
+            left: 779px;
+        }
+
+        .styledTable,
+        .styledTable th,
+        .styledTable td {
+            border: 1px solid rgb(255, 255, 255);
+            border-collapse: collapse;
+            border-radius: 10px;
+            padding: 8px;
+            text-align: center;
+        }
+
+        .mainTable {
+            width: 100%;
+            height: 32px;
+            margin: 20px 10px;
+        }
+
+        .mainTable td {
+            vertical-align: top;
+            padding: 10px;
+        }
+
+        .styledTable th {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+        }
+
+        .styledTable tr {
+            padding: 40px;
+            color: gray;
+
+        }
+
+
+
+        .pors ul {
+            text-decoration: none;
+            font-style: italic;
+            padding: 20px;
+            list-style-type: none;
+
+        }
+
+
+
+        footer {
+            background-color: #0e0e1a;
+            height: 230px;
+        }
+
+        .footer {
+            display: flex;
+            padding: 23px 120px;
+            justify-content: space-evenly;
+
+        }
+
+        .footer ul {
+            list-style: none;
+
+        }
+
+        .footer ul a {
+            text-decoration: none;
+            color: white;
+            height: 20px;
+        }
+
+        .footer ul a:hover {
+            color: rgb(140, 140, 229);
+            font-size: 1.02rem;
+        }
+
+        .footer>div {
+            width: 290px;
+        }
+
+        .footer-rights {
+            text-align: center;
+            color: gray;
+            padding: 12px;
+        }
+
+        .fourthSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 50px 0;
+            /* height: 300vh; */
+        }
+
+        .fourthSection h1 {
+            font-size: 1.9rem;
+            color: rgb(131, 75, 184);
+        }
+
+        .proj1 {
+            background-color: rgb(3, 4, 25);
+            border: 2px solid white;
+            margin-top: 30px;
+            border-radius: 40px;
+        }
+
+
+        .muscify {
+            position: relative;
+            top: -200px;
+            width: 500px;
+            margin: 10px 20px;
+        }
+
+        .projDesc {
+            position: relative;
+            top: 10px;
+            color: gray;
+            width: 500px;
+            margin: 10px 50px;
+        }
+
+        .projDesc ul a {
+            text-decoration: none;
+            color: white;
+            height: 20px;
+            color: rgb(147, 92, 198);
+            list-style: none;
+        }
+
+        .projDesc ul a:hover {
+            color: rgb(140, 140, 229);
+            font-size: 1.02rem;
+        }
+
+        .proj2 {
+            background-color: rgb(3, 4, 25);
+            border: 2px solid white;
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+
+        .sali {
+            position: relative;
+            top: -355px;
+            width: 500px;
+            margin: 5px 20px;
+        }
+
+        .proj3 {
+            background-color: rgb(3, 4, 25);
+            border: 2px solid white;
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+
+        .basket {
+            position: relative;
+            top: -355px;
+            width: 500px;
+            margin: 10px 20px;
+        }
+
+        .proj4 {
+            background-color: rgb(3, 4, 25);
+            border: 2px solid white;
+            border-radius: 40px;
+            margin-top: 30px;
+        }
+
+        .gwl {
+            position: relative;
+            top: -355px;
+            width: 500px;
+            margin: 10px 20px;
+        }
+
+        .image-top2 {
+            width: 30%;
+            position: relative;
+            top: 65px;
+            left: 779px;
+        }
+
+        .fifthSection {
+            max-width: 80vw;
+            margin: auto;
+            padding: 50px 0;
+            /* height: 100vh; */
+        }
+
+        .fifthSection h1 {
+            font-size: 1.9rem;
+            color: rgb(131, 75, 184);
+        }
+
+        .contact form {
+            display: flex;
+            flex-direction: column;
+            max-width: 700px;
+            /* max-height: 2000px; */
+            margin: auto;
+        }
+
+        .contact form div {
+            margin-bottom: 15px;
+        }
+
+        .contact form label {
+            margin-bottom: 50px;
+            font-weight: bold;
+        }
+
+        .contact form input,
+        .contact form textarea {
+            background-color: rgb(148, 148, 179);
+            padding: 10px;
+            font-size: 16px;
+            width: 100%;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .txt1{
+            height: 150px;
+        }
+
+        .contact form button {
+            padding: 12px;
+            background-color: #1e2167;
+            color: white;
+            border: 2px solid white;
+            border-radius: 6px;
+            font-size: 20px;
+            cursor: pointer;
+            text-decoration: none;
+            max-width: 150px;
+            align-self: center;
+        }
+
+        .contact form button:hover {
+            background-color: #3d4098;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">Hitesh's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Work Experience</a></li>
+                    <li><a href="">Projects</a></li>
+                    <li><a href="">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">
+                Hi, I am <span class="purple"> <b>Hitesh Vatsayan</b></span> , bringing your ideas to life with
+                code!<br> I am
+                a passionate<br>
+                <span id="element"></span>
+                <div class="buttons">
+                    <a href="assets/resume.pdf" download class="btn">Download Resume</a>
+                    <a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225" target="_blank" class="btn">Visit
+                        LinkedIn</a>
+
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="assets/7.png" alt="">
+            </div>
+        </section>
+        <hr>
+
+
+        <section class="secondSection">
+            <h1><b>Work Experience</b></h1>
+
+
+            <img class="image-top1" src="assets/8.png" alt="">
+            <div class="vertical-title1">
+                Research Intern (Jan,2024 - May,2024) <br>
+                KRaCR Lab, Department of CSE, IIIT Delhi
+                <div class="vertical-desc1">
+                    <ul>
+                        <li>Developed interactive visualizations of legal knowledge graphs for intuitive exploration
+                            of
+                            legal concepts and relationships</li><br>
+                        <li>Implemented recursive retrieval features using RDF, SPARQL, and JavaScript for
+                            web-based information fetching and visualization.</li> <br>
+                        <li>Guides:
+                            <ul>
+                                <a href="https://www.linkedin.com/in/raghavamutharaju/">Dr. Raghava Mutharaju</a><br>
+                                <a href="https://www.linkedin.com/in/joseph-pookkatt-66242839/">Dr. Joseph Pookkatt</a>
+                            </ul>
+
+                        </li>
+                    </ul>
+                    <br>
+                    <br>
+
+                </div>
+
+                <div class="buttons">
+
+                    <a href="https://kracr.iiitd.edu.in/" target="_blank" class="btn">About KRaCR Lab</a>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+        </section>
+        <hr>
+        <section class="thirdSection">
+            <h1><b>About Me</b></h1>
+            <img class="hiteshImg" src="assets/hit2.png" alt="">
+            <div class="intro">
+                My name is <b>Hitesh Vatsayan</b>, and I am a motivated and dedicated individual currently pursuing a
+                <b>B.Tech in
+                    Computer Science from IIIT Delhi</b>. <br><br> With a strong passion for software development, I
+                possess a
+                solid
+                understanding of key concepts such as Data Structures and Algorithms, Analysis and Design of Algorithms,
+                Object-Oriented Programming, and Database Management Systems. <br> <br>Proficient in Java, Python, and
+                C, I am
+                well-equipped to tackle various programming challenges.
+                <br>
+                <table class="mainTable">
+                    <tr>
+                        <td>
+                            <table class="styledTable">
+                                <tr>
+                                    <th>Expertise Area</th>
+                                </tr>
+                                <tr>
+                                    <td>Data Structures and Algorithms</td>
+                                </tr>
+                                <tr>
+                                    <td>Object-Oriented Programming</td>
+                                </tr>
+                                <tr>
+                                    <td>Analysis & Design of Algorithms</td>
+                                </tr>
+                                <tr>
+                                    <td>Database Management Systems</td>
+                                </tr>
+                                <tr>
+                                    <td>Operating Systems</td>
+                                </tr>
+                                <tr>
+                                    <td>Ontology</td>
+                                </tr>
+                                <tr>
+                                    <td>Web Development</td>
+                                </tr>
+                            </table>
+                        </td>
+                        <td>
+                            <table class="styledTable">
+                                <tr>
+                                    <th>Programming Languages</th>
+                                </tr>
+                                <tr>
+                                    <td>Java</td>
+                                </tr>
+                                <tr>
+                                    <td>Python</td>
+                                </tr>
+                                <tr>
+                                    <td>C</td>
+                                </tr>
+                                <tr>
+                                    <td>SQL</td>
+                                </tr>
+                                <tr>
+                                    <td>R</td>
+                                </tr>
+                                <tr>
+                                    <td>JavaScript</td>
+                                </tr>
+                                <tr>
+                                    <td>SPARQL</td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                </table>
+                <!-- <div class="porH">
+                    <h3><i>Positions of Responsibilities Holded:</i></h3>
+                    <div class="pors">
+                        <ul>
+                            <li>Batch Representative - Student Council, IIIT-Delhi</li>
+                            <li>Sponsorship Head, E-Summit'24 ,IIIT-Delhi</li>
+                            <li>Sponsorship Head, Esya'23 - Techfest, IIIT-Delhi</li>
+                            <li>Sponsorship Head, TEDxIIITD 2023</li>
+                            <li>Sponsorship Team Lead, Odyssey - Annnual Cultural Fest, IIIT-Delhi</li>
+                        </ul>
+                    </div>
+                </div> -->
+
+
+            </div>
+
+
+
+        </section>
+        <hr>
+        <section class="fourthSection">
+            <h1>My Projects</h1>
+
+
+            <div class="proj1">
+                <img class="image-top1" src="assets/9.png" alt="">
+                <div class="muscify">
+
+                    <b>MusciFy - Database Integration of Different Music Platforms</b>
+                    <div class="projDesc">
+                        <ul>
+                            <li>Developed an integrated music database by harmonizing data from various platforms
+                                (Spotify, Apple Music, YouTube Music, Resso).</li><br>
+                            <!-- insights to music labels.</li> <br> -->
+                            <li>This will help in strategic
+                                decision-making, competitive advantage, and effective marketing strategies through
+                                data-driven optimizations.</li><br>
+                            <li>Guide : <a href="https://www.linkedin.com/in/mukesh-mohania-4755606/"> Dr. Mukesh
+                                    Mohania</a><br> <br>
+
+                            </li>
+
+                        </ul>
+                        <div class="buttons">
+                            <a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225" target="_blank"
+                                class="btn">Go to Github</a>
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="proj2">
+                <img class="image-top1" src="assets/11.png" alt="">
+                <div class="sali">
+
+                    <b>Legal Knowledge Graph Visualizer</b>
+                    <div class="projDesc">
+                        <ul>
+                            <li>The Legal Knowledge Graph Visualizer is a web tool that visualizes legal concepts and
+                                their relationships. It aids legal research with features like recursive retrieval and
+                                allows users to search for any legal term to see related information</li><br>
+                            <li>Tech Stack - Javascript, Python, HTML, CSS</li> <br>
+
+                            <li>Guides:
+                                <ul>
+                                    <a href="https://www.linkedin.com/in/raghavamutharaju/">Dr. Raghava
+                                        Mutharaju</a><br>
+                                    <a href="https://www.linkedin.com/in/joseph-pookkatt-66242839/">Dr. Joseph
+                                        Pookkatt</a>
+                                </ul></a><br> <br>
+
+                            </li>
+
+                        </ul>
+                        <div class="buttons">
+                            <a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225" target="_blank"
+                                class="btn">Go to Github</a>
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="proj3">
+                <img class="image-top1" src="assets/12.png" alt="">
+                <div class="basket">
+
+                    <b>Meri Basket - Online Grocery Shop</b>
+                    <div class="projDesc">
+                        <ul>
+                            <li>A web application that customers can use to order daily groceries online as per their
+                                needs.</li><br>
+                            <li>The customer could browse categories, products, and available product discounts on
+                                the application. Database was maintained using mySQL.</li> <br>
+
+                            <li>Tech Stack - Python , SQL, HTML, CSS, JavaScript, Flask</li> <br>
+
+                            <li>Guide : <a href="https://www.linkedin.com/in/mukesh-mohania-4755606/"> Dr. Mukesh
+                                    Mohania</a><br> <br>
+
+                        </ul>
+                        <div class="buttons">
+                            <a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225" target="_blank"
+                                class="btn">Go to Github</a>
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+            </div>
+            <div class="proj4">
+                <img class="image-top2" src="assets/13.png" alt="">
+                <div class="gwl">
+
+                    <b>Analysis of the impact of different factors on ground water level in different parts of
+                        India.</b>
+                    <div class="projDesc">
+                        <ul>
+                            <li>Tested the impact of SDP, Capital Expenditure, Aggregate expenditure and margin of
+                                election victory on ground water level.</li><br>
+                            <li>Done using the statistical data analysis and running their
+                                regression model on R studio.</li> <br>
+
+                            <li>Tech Stack - R</li> <br>
+
+                            <li>Guide : <a href="https://www.linkedin.com/in/gaurav-arora-23232310/"> Dr. Gaurav
+                                    Arora</a><br> <br>
+
+                        </ul>
+                        <div class="buttons">
+                            <a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225" target="_blank"
+                                class="btn">Go to Github</a>
+
+                        </div>
+
+                        <br>
+                        <br>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </section>
+        <hr>
+        <section class="fifthSection">
+            <div class="contact">
+                <h1><b>Contact Me</b></h1>
+                <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                    <input type="hidden" name="access_key" value="fe3db5ad-3586-4eff-bf56-231d48375681">
+                    <div>
+                        <label for="name">Your Name:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div>
+                        <label for="email">Your Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div >
+                        <label for="message">Your Message:</label>
+                        <textarea id="message" class="txt1" name="message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Submit</button>
+                </form>
+            </div>
+        </section>
+        <hr>
+        
+        
+
+
+
+    </main>
+    <!-- <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+    
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+    
+            // Using EmailJS to send email
+            emailjs.send('service_swdzsos', 'template_31s5ceh', {
+                from_email: email,
+                subject: subject,
+                message: message,
+            }).then(function(response) {
+                alert('Message sent successfully!');
+            }, function(error) {
+                alert('Failed to send message. Please try again.');
+            });
+        });
+    
+        // Initialize EmailJS
+        (function() {
+            emailjs.init('hitesh21392@iiitd.ac.in');
+        })();
+    </script> -->
+    
+    
+    
+    <footer>
+        <div class="footer">
+            <div class="footer-first">
+                <h3>Hitesh's Developer Portfolio</h3>
+                Contact Number: +91-7011062246 <br>
+                Mail ID : hiteshvatsayan@gmail.com
+            </div>
+            <div class="footer-second">
+                <ul>
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About Me</a></li>
+                    <li><a href="">Work Experience</a></li>
+                    <li><a href="">Projects</a></li>
+
+                </ul>
+            </div>
+            <div class="footer-third">
+                <ul>
+
+
+                    <li><a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225/">LinkedIn</a></li>
+                    <li><a href="https://codeforces.com/profile/hitesh21392">Codeforces</a></li>
+                    <li><a href="https://leetcode.com/u/hitesh21392/">LeetCode</a></li>
+                    <li><a href="https://github.com/HiteshVatsayan">Github</a></li>
+
+
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="footer-rights">
+            Copyright &#169; www.hiteshdevportfolio.com | All rights reserved
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Software Developer!', 'Web Developer!', 'UI/UX Designer!', 'Frontend Developer!', 'Software Developer!'],
+            typeSpeed: 50,
+        });
+    </script>
+</body>
+
+</html>
