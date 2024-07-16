@@ -12,7 +12,7 @@
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -39,7 +39,7 @@
 
         }
 
-        nav:hover{
+        nav:hover {
             background: linear-gradient(to right, #1f1f7d, #23226a);
             /* Gradient from blue to cyan */
             transform: scale(1.1);
@@ -497,7 +497,8 @@
             border-radius: 5px;
             border: 1px solid #ccc;
         }
-        .contact form input:hover{
+
+        .contact form input:hover {
             background: linear-gradient(to right, #1f1f7d, #22466a);
             /* Gradient from blue to cyan */
             transform: scale(1.1);
@@ -533,6 +534,23 @@
         main {
             padding-top: 60px;
             /* Adjust this value based on your header height */
+        }
+
+        .proj1,
+        .proj2,
+        .proj3,
+        .proj4 {
+            opacity: 0;
+            transform: translateX(-100%);
+            transition: all 0.5s ease-out;
+        }
+
+        .proj1.visible,
+        .proj2.visible,
+        .proj3.visible,
+        .proj4.visible {
+            opacity: 1;
+            transform: translateX(0);
         }
     </style>
 </head>
@@ -923,8 +941,10 @@
                 <ul>
 
 
-                    <li><a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
-                    <li><a href="https://codeforces.com/profile/hitesh21392"><i class="fas fa-code"></i> Codeforces</a></li>
+                    <li><a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225/"><i class="fab fa-linkedin"></i>
+                            LinkedIn</a></li>
+                    <li><a href="https://codeforces.com/profile/hitesh21392"><i class="fas fa-code"></i> Codeforces</a>
+                    </li>
                     <li><a href="https://leetcode.com/u/hitesh21392/"><i class="fas fa-lightbulb"></i> LeetCode</a></li>
                     <li><a href="https://github.com/HiteshVatsayan"><i class="fab fa-github"></i> Github</a></li>
 
@@ -942,7 +962,7 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
         var typed = new Typed('#element', {
-            strings: ['Programmer!','Software Developer!', 'Web Developer!','UI/UX Designer!', 'Frontend Developer!', 'Software Developer!'],
+            strings: ['Programmer!', 'Software Developer!', 'Web Developer!', 'UI/UX Designer!', 'Frontend Developer!', 'Software Developer!'],
             typeSpeed: 50,
         });
     </script>
@@ -964,6 +984,21 @@
             });
         });
 
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+
+            const projects = document.querySelectorAll('.proj1, .proj2, .proj3, .proj4');
+            projects.forEach(project => observer.observe(project));
+        });
     </script>
 </body>
 
