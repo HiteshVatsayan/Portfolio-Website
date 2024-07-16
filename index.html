@@ -5,11 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hitesh - Portfolio Website</title>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -324,7 +327,10 @@
 
         }
 
-        .proj1:hover, .proj2:hover, .proj3:hover, .proj4:hover {
+        .proj1:hover,
+        .proj2:hover,
+        .proj3:hover,
+        .proj4:hover {
             background: linear-gradient(to right, #1f1f7d, #23226a);
             /* Gradient from blue to cyan */
             transform: scale(1.1);
@@ -504,6 +510,15 @@
         .contact form button:hover {
             background-color: #3d4098;
         }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        main {
+            padding-top: 60px;
+            /* Adjust this value based on your header height */
+        }
     </style>
 </head>
 
@@ -513,18 +528,18 @@
             <div class="left">Hitesh's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Me</a></li>
-                    <li><a href="">Work Experience</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact Me</a></li>
+                    <li><a href="#first">Home</a></li>
+                    <li><a href="#third">About Me</a></li>
+                    <li><a href="#second">Work Experience</a></li>
+                    <li><a href="#fourth">Projects</a></li>
+                    <li><a href="#fifth">Contact Me</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section class="firstSection">
+        <section id="first" class="firstSection">
             <div class="leftSection">
                 Hi, I am <span class="purple"> <b>Hitesh Vatsayan</b></span> , bringing your ideas to life with
                 code!<br> I am
@@ -545,7 +560,7 @@
         <hr>
 
 
-        <section class="secondSection">
+        <section id="second" class="secondSection">
             <h1><b>Work Experience</b></h1>
 
 
@@ -588,7 +603,7 @@
 
         </section>
         <hr>
-        <section class="thirdSection">
+        <section id="third" class="thirdSection">
             <h1><b>About Me</b></h1>
             <img class="hiteshImg" src="assets/hit2.png" alt="">
             <div class="intro">
@@ -682,7 +697,7 @@
 
         </section>
         <hr>
-        <section class="fourthSection">
+        <section id="fourth" class="fourthSection">
             <h1>My Projects</h1>
 
 
@@ -817,7 +832,7 @@
 
         </section>
         <hr>
-        <section class="fifthSection">
+        <section id="fifth" class="fifthSection">
             <div class="contact">
                 <h1><b>Contact Me</b></h1>
                 <form id="contactForm" action="https://api.web3forms.com/submit" method="POST">
@@ -882,10 +897,10 @@
             </div>
             <div class="footer-second">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Me</a></li>
-                    <li><a href="">Work Experience</a></li>
-                    <li><a href="">Projects</a></li>
+                    <li><a href="#first">Home</a></li>
+                    <li><a href="#third">About Me</a></li>
+                    <li><a href="#second">Work Experience</a></li>
+                    <li><a href="#fourth">Projects</a></li>
 
                 </ul>
             </div>
@@ -893,11 +908,10 @@
                 <ul>
 
 
-                    <li><a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225/">LinkedIn</a></li>
-                    <li><a href="https://codeforces.com/profile/hitesh21392">Codeforces</a></li>
-                    <li><a href="https://leetcode.com/u/hitesh21392/">LeetCode</a></li>
-                    <li><a href="https://github.com/HiteshVatsayan">Github</a></li>
-
+                    <li><a href="https://www.linkedin.com/in/hitesh-vatsayan-796a22225/"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                    <li><a href="https://codeforces.com/profile/hitesh21392"><i class="fas fa-code"></i> Codeforces</a></li>
+                    <li><a href="https://leetcode.com/u/hitesh21392/"><i class="fas fa-lightbulb"></i> LeetCode</a></li>
+                    <li><a href="https://github.com/HiteshVatsayan"><i class="fab fa-github"></i> Github</a></li>
 
                 </ul>
             </div>
@@ -916,6 +930,25 @@
             strings: ['Software Developer!', 'Web Developer!', 'UI/UX Designer!', 'Frontend Developer!', 'Software Developer!'],
             typeSpeed: 50,
         });
+    </script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                const headerOffset = 60; // Adjust this value to your header's height
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
     </script>
 </body>
 
